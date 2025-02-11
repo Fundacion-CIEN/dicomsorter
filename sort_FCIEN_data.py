@@ -21,7 +21,17 @@ for root, dirs, files in os.walk(input_dir):
             #print("Executing command:", command)  # For debugging/logging
             os.system(command)
 
+"""
+list_dcms = os.listdir(input_dir)
 
+for dcm in list_dcms:
+
+    dcm_dir_ =os.path.join(input_dir, dcm)
+
+    command = f'dicomsorter {dcm_dir_} {output_dir} --path {order_} --original-filename --force --overwrite'
+
+    os.system(command)
+"""
 
 # Regular expression to match folder names starting with "Series"
 # It captures the series number and the rest of the description.
